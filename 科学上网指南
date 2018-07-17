@@ -1,0 +1,82 @@
+科研中可能需要科学上网，才能获取到原来无法访问的资源。现在发现一个自建shadowsocks服务的方法，虽然配置步骤多，但难度较低，也仅需花费5美刀，便可获得最少一年的 vps 使用，最快半个小时即可配置成功。一般两三个小时也能搞定。所以介绍给大家。
+
+由于每个部分都有详细的教程，所以我就不再重复造轮子，只是把这个流程整理一下给大家，大家可以参考我给出的链接，也可以自行搜索解决（Google），
+#### 利益相关与事前知晓
+1. 文中有我的分享链接，如果你觉得此教程有用，可以点击链接注册，在此感谢；
+2. 服务器配置详见网站，流量1 T，速度不作保证，但只为科研没什么问题，稳定性自己负责；
+3. 可不可以把自己的ss账号分享给别人使用？欢迎分享，注意安全；
+4. 可不可以帮你配置？建议自己按照指南配置，本指南不难，只要简单熟悉Linux基本都能成功，遇到不懂的先谷歌，再有问题可以在本项目的issues里提问，参见[提问的智慧][7]；
+5. 未尽详实之处可以给<distant1219@gmail.com>致信询问或在项目issues里提出，一起完善本指南。
+
+
+## 准备
+
+### PayPal 账户
+[PayPal][1] 账户是用来支付 vps 的5美元的服务器费用，也是仅仅需要这一次支付，其他都是优惠券。
+约合人名币35元不到，可以说是很值了。
+
+如果之前因为出国或者国外代购注册过的直接使用即可，可跳过注册。
+注册完成之后，需要关联信用卡或借记卡便可以了。
+
+### 注册购买 Digitalocean vps 服务器
+
+Digitalocean是知名的vps服务商，比较有名的还有[搬瓦工][2], [Vultr][3]等。
+
+**通过我的分享链接注册，两个人都可以获得$10的优惠，我的分享链接是[https://m.do.co/c/4d4c8a7b52df](https://m.do.co/c/4d4c8a7b52df)**
+
+注册成功之后，需要用PayPal支付5美元，才能继续使用。
+
+另外，千万不要用同一个PayPal支付两个DO账号！！！！
+
+另外，千万不要用同一个PayPal支付两个DO账号！！！！
+
+另外，千万不要用同一个PayPal支付两个DO账号！！！！
+
+因为那样会被视作一个人使用多个账户，会被封号的！！！！
+
+### GitHub 学生优惠
+
+GitHub有个学生开发包，里面包含一张50美元的Digitalocean优惠券，这个券也是整个行为的核心驱动。
+这里是申请的网址：https://education.github.com/
+
+p.s.
+1. 如果没有GitHub账户，请先自行注册。
+2. 如果没有校园网邮箱，可以上传学生证照片或者学信网截图（虽然我有西电邮箱，但是哎）
+
+具体的步骤可以参见：[GitHub教程 学生认证——学生包申请][4]
+
+认证成功后，就可以看到
+
+![](http://ow5vsszoc.bkt.clouddn.com/blog/ss/do1.png)
+
+然后，进入DigitalOcean网站，在账户设置页面的左侧菜单选择 Billing 选项，下来找到 Promo code 兑换码输入框，将 GitHub 送给你的 50 美金兑换码填入即可。
+
+![](http://ow5vsszoc.bkt.clouddn.com/blog/ss/Inked3664176-14058963387010eb_LI_Moment_Moment.jpg)
+
+ ***但是请注意：*** 如果是通过我的分享链接注册的话，可能没有这个界面，但是不要紧，只要点击 DigitalOcean 上方的 Support 帮助，右上方会有蓝色的 Support tickets 选项，也就是申请一张工单。然后，创建一张工单，告诉 DigitalOcean 你无法兑换来自 GitHub 的优惠码，并将兑换码发给他。
+
+ ![](http://ow5vsszoc.bkt.clouddn.com/blog/ss/3664176-d9147a0ef9d16fff.png)
+
+ 上图给出了一个简单的示例，你可以说的更详细动情一些。一般情况下，DigitalOcean 会尽快为你完成充值，服务棒棒哒。此时，你的账户余额为 65 美金。按照最低 5 美金/月的 VPS 计算，足够能用一整年。
+
+## 配置 ssr 服务端
+注册完DigitalOcean之后，便可以配置一台vps，选择最便宜的5美元每月的vps即可。
+
+**注意节点我的选择是伦敦节点，另外旧金山也很好。可以自行[测速][5]选择**
+具体的安装shadowsocks配置见下方链接，一键式安装脚本。
+
+[digitalocean搭建ssr教程][6]
+
+## 配置客户端
+
+这部分用过的人应该都会自行配置，在此不再详述。
+
+[1]: https://www.paypal.com/c2/home
+[2]: https://bandwagonhost.com/
+[3]: https://www.vultr.com/
+
+[4]: https://blog.csdn.net/qq_36667170/article/details/79084166
+[5]: http://speedtest-nyc2.digitalocean.com/
+
+[6]: http://wafe.cc/2017/12/19/digitalocean%E6%90%AD%E5%BB%BAssr/
+[7]:https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md
